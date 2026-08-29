@@ -1,0 +1,43 @@
+{
+  "sources": [
+    {
+      "name": "ultrachat_200k",
+      "type": "ultrachat",
+      "dataset": "HuggingFaceH4/ultrachat_200k",
+      "split": "train_sft",
+      "max_conversations": 120000
+    },
+    {
+      "name": "oasst1_fr_en",
+      "type": "oasst1",
+      "dataset": "OpenAssistant/oasst1",
+      "split": "train",
+      "allowed_languages": ["fr", "en"],
+      "max_children": 2,
+      "max_conversations": 40000
+    },
+    {
+      "name": "dolly_15k",
+      "type": "hf_prompt_response",
+      "dataset": "databricks/databricks-dolly-15k",
+      "split": "train",
+      "prompt_keys": ["instruction"],
+      "context_keys": ["context"],
+      "response_keys": ["response"],
+      "system_prompt": "Tu es Lyse AI, une assistante utile, concise et francophone.",
+      "max_conversations": 15000
+    },
+    {
+      "name": "custom_messages",
+      "type": "local_messages_jsonl",
+      "glob": "data/custom_sft/**/*.jsonl",
+      "max_conversations": 50000
+    },
+    {
+      "name": "claire_local_txt",
+      "type": "claire_txt",
+      "glob": "data/custom_sft/claire/**/*.txt",
+      "max_conversations": 40000
+    }
+  ]
+}

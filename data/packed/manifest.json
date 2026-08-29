@@ -1,0 +1,147 @@
+{
+  "tokenizer": "C:\\Users\\Samy\\Downloads\\lyse.ai\\artifacts\\tokenizer.model",
+  "seq_len": 512,
+  "dtype": "<class 'numpy.uint16'>",
+  "files": [
+    {
+      "path": "data\\packed\\train-00000.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00001.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00002.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00003.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00004.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00005.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00006.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00007.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00008.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00009.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00010.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00011.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00012.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00013.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00014.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00015.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00016.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00017.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00018.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00019.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00020.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00021.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00022.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00023.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00024.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00025.npy",
+      "rows": 20000,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\train-00026.npy",
+      "rows": 4079,
+      "split": "train"
+    },
+    {
+      "path": "data\\packed\\val-00000.npy",
+      "rows": 5137,
+      "split": "val"
+    }
+  ]
+}

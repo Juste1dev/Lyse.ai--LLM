@@ -1,0 +1,9 @@
+torch>=2.4.0
+numpy>=1.26.0
+PyYAML>=6.0.1
+sentencepiece>=0.2.0
+datasets>=2.21.0
+tqdm>=4.66.4
+prompt_toolkit>=3.0.47
+rich>=13.7.1
+bitsandbytes>=0.43.1; platform_system != "Windows"

@@ -1,0 +1,76 @@
+model:
+  name: lyse-67m-daily
+  vocab_size: 32000
+  max_seq_len: 512
+  n_layers: 16
+  n_heads: 8
+  d_model: 512
+  d_ff: 2048
+  dropout: 0.1
+  bias: false
+  tie_embeddings: true
+  use_gradient_checkpointing: true
+  layer_norm_epsilon: 1.0e-5
+
+data:
+  seq_len: 512
+  train_shards_glob: data/packed/train-*.npy
+  val_shards_glob: data/packed/val-*.npy
+  shuffle_shards: true
+  text_key: text
+  num_workers: 0
+  pin_memory: true
+
+training:
+  seed: 42
+  device: cuda
+  precision: bf16
+  compile_model: false
+  use_8bit_optimizer: true
+  batch_size: 32
+  micro_batch_size: 2
+  gradient_accumulation_steps: 16
+  learning_rate: 0.0003
+  min_lr: 0.00003
+  weight_decay: 0.1
+  beta1: 0.9
+  beta2: 0.95
+  warmup_steps: 500
+  max_steps: 50000
+  grad_clip: 1.0
+  log_interval: 10
+  eval_interval: 100
+  eval_batches: 10
+  checkpoint_interval_steps: 100
+  checkpoint_interval_minutes: 5
+  checkpoint_dir: checkpoints/pretrain
+  logs_dir: logs/pretrain
+  tokenizer_path: artifacts/tokenizer.model
+  resume_from: ""
+  max_runtime_minutes: 60
+
+sft:
+  train_file: data/sft/train.jsonl
+  val_file: data/sft/val.jsonl
+  max_seq_len: 512
+  batch_size: 8
+  micro_batch_size: 1
+  gradient_accumulation_steps: 8
+  learning_rate: 0.0001
+  min_lr: 0.00001
+  weight_decay: 0.01
+  beta1: 0.9
+  beta2: 0.95
+  warmup_steps: 100
+  max_steps: 5000
+  grad_clip: 1.0
+  precision: bf16
+  compile_model: false
+  log_interval: 10
+  eval_interval: 50
+  eval_batches: 10
+  checkpoint_interval_steps: 50
+  checkpoint_interval_minutes: 5
+  checkpoint_dir: checkpoints/sft
+  logs_dir: logs/sft
+  max_runtime_minutes: 60

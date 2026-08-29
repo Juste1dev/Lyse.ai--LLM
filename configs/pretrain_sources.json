@@ -1,0 +1,32 @@
+{
+  "sources": [
+    {
+      "name": "fineweb_edu_general",
+      "type": "fineweb_edu",
+      "dataset": "HuggingFaceFW/fineweb-edu",
+      "split": "train",
+      "max_docs": 250000
+    },
+    {
+      "name": "culturax_fr",
+      "type": "culturax",
+      "dataset": "uonlp/CulturaX",
+      "language": "fr",
+      "split": "train",
+      "max_docs": 150000
+    },
+    {
+      "name": "custom_texts",
+      "type": "local_txt",
+      "glob": "data/custom_pretrain/**/*.txt",
+      "max_docs": 50000
+    },
+    {
+      "name": "custom_jsonl_texts",
+      "type": "local_jsonl_text",
+      "glob": "data/custom_pretrain/**/*.jsonl",
+      "text_key": "text",
+      "max_docs": 50000
+    }
+  ]
+}

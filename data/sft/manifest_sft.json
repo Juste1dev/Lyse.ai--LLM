@@ -1,0 +1,26 @@
+{
+  "sources_config": "C:\\Users\\Samy\\Downloads\\lyse.ai\\configs\\sft_sources.json",
+  "train_output": "C:\\Users\\Samy\\Downloads\\lyse.ai\\data\\sft\\train.jsonl",
+  "val_output": "C:\\Users\\Samy\\Downloads\\lyse.ai\\data\\sft\\val.jsonl",
+  "train_count": 143302,
+  "val_count": 2885,
+  "total_kept": 146187,
+  "unique_conversations": 146187,
+  "counts_by_source": {
+    "ultrachat_200k": 120000,
+    "oasst1_fr_en": 11202,
+    "dolly_15k": 14985
+  },
+  "split_counts": {
+    "train": {
+      "dolly_15k": 14688,
+      "ultrachat_200k": 117647,
+      "oasst1_fr_en": 10967
+    },
+    "val": {
+      "ultrachat_200k": 2353,
+      "dolly_15k": 297,
+      "oasst1_fr_en": 235
+    }
+  }
+}
