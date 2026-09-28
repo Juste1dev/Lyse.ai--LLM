@@ -68,8 +68,7 @@ class ConversationSFTDataset(Dataset):
                     {"role": "assistant", "content": response},
                 ]
             )
-        return torch.tensor(ids, dtype=torch.long), torch.tensor(labels, dtype=torch.long)
-
+        return torch.tensor(ids[:-1], dtype=torch.long), torch.tensor(labels[1:], dtype=torch.long)
 
 
 def sft_collate_fn(batch, pad_id: int):

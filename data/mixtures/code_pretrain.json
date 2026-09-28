@@ -1,0 +1,105 @@
+{
+  "_comment": "Mixture pre-train de la branche code. enabled=false = ignoré. Règle max_docs selon ton GPU et ton temps. Seule la première source est active par défaut : c'est la seule qui ne demande ni compte HF ni conditions à accepter.",
+  "sources": [
+    {
+      "name": "codeparrot-clean-python",
+      "enabled": true,
+      "dataset": "codeparrot/codeparrot-clean",
+      "split": "train",
+      "text_key": "content",
+      "license_key": "license",
+      "allowed_licenses": [],
+      "max_docs": 150000,
+      "note": "~50 Go de Python dédupliqué au total, déjà filtré sur licences permissives (MIT/BSD/Apache/ISC) par les auteurs du dataset. On n'en prend qu'une fraction via max_docs."
+    },
+    {
+      "name": "codeparrot-clean-valid-python",
+      "enabled": false,
+      "dataset": "codeparrot/codeparrot-clean-valid",
+      "split": "train",
+      "text_key": "content",
+      "max_docs": 0,
+      "note": "~5 Go, le truc parfait pour vérifier que tout le pipeline tourne avant un vrai run."
+    },
+    {
+      "name": "the-stack-smol-python",
+      "enabled": false,
+      "dataset": "bigcode/the-stack-smol",
+      "data_dir": "data/python",
+      "split": "train",
+      "text_key": "content",
+      "max_docs": 10000,
+      "note": "Gated : accepter les conditions BigCode sur la page du dataset + huggingface-cli login."
+    },
+    {
+      "name": "the-stack-smol-javascript",
+      "enabled": false,
+      "dataset": "bigcode/the-stack-smol",
+      "data_dir": "data/javascript",
+      "split": "train",
+      "text_key": "content",
+      "max_docs": 8000,
+      "note": "Gated (BigCode)."
+    },
+    {
+      "name": "the-stack-smol-java",
+      "enabled": false,
+      "dataset": "bigcode/the-stack-smol",
+      "data_dir": "data/java",
+      "split": "train",
+      "text_key": "content",
+      "max_docs": 8000,
+      "note": "Gated (BigCode)."
+    },
+    {
+      "name": "the-stack-smol-typescript",
+      "enabled": false,
+      "dataset": "bigcode/the-stack-smol",
+      "data_dir": "data/typescript",
+      "split": "train",
+      "text_key": "content",
+      "max_docs": 6000,
+      "note": "Gated (BigCode)."
+    },
+    {
+      "name": "the-stack-smol-c",
+      "enabled": false,
+      "dataset": "bigcode/the-stack-smol",
+      "data_dir": "data/c",
+      "split": "train",
+      "text_key": "content",
+      "max_docs": 6000,
+      "note": "Gated (BigCode)."
+    },
+    {
+      "name": "the-stack-smol-cpp",
+      "enabled": false,
+      "dataset": "bigcode/the-stack-smol",
+      "data_dir": "data/cpp",
+      "split": "train",
+      "text_key": "content",
+      "max_docs": 6000,
+      "note": "Gated (BigCode)."
+    },
+    {
+      "name": "the-stack-smol-rust",
+      "enabled": false,
+      "dataset": "bigcode/the-stack-smol",
+      "data_dir": "data/rust",
+      "split": "train",
+      "text_key": "content",
+      "max_docs": 5000,
+      "note": "Gated (BigCode)."
+    },
+    {
+      "name": "the-stack-smol-go",
+      "enabled": false,
+      "dataset": "bigcode/the-stack-smol",
+      "data_dir": "data/go",
+      "split": "train",
+      "text_key": "content",
+      "max_docs": 5000,
+      "note": "Gated (BigCode)."
+    }
+  ]
+}
