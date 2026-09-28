@@ -1,0 +1,21 @@
+{
+  "tokenizer": "/home/harold/Documents/informatique/Lyse/Lyse.ai--LLM/artifacts/tokenizer.model",
+  "seq_len": 512,
+  "dtype": "<class 'numpy.uint16'>",
+  "mixture": "/home/harold/Documents/informatique/Lyse/Lyse.ai--LLM/data/mixtures/code_pretrain.json",
+  "docs_by_source": {
+    "codeparrot-clean-python": 3000
+  },
+  "files": [
+    {
+      "path": "data/packed_code_test/train-00000.npy",
+      "rows": 18164,
+      "split": "train"
+    },
+    {
+      "path": "data/packed_code_test/val-00000.npy",
+      "rows": 41,
+      "split": "val"
+    }
+  ]
+}

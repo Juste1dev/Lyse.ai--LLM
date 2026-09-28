@@ -1,0 +1,20 @@
+{
+  "mixture": "/home/harold/Documents/informatique/Lyse/Lyse.ai--LLM/data/mixtures/code_sft.json",
+  "train_output": "/home/harold/Documents/informatique/Lyse/Lyse.ai--LLM/data/sft_code/train.jsonl",
+  "val_output": "/home/harold/Documents/informatique/Lyse/Lyse.ai--LLM/data/sft_code/val.jsonl",
+  "train_count": 4906,
+  "val_count": 94,
+  "total_kept": 5000,
+  "unique_conversations": 5000,
+  "counts_by_source": {
+    "magicoder-oss-instruct-75k": 5000
+  },
+  "split_counts": {
+    "train": {
+      "magicoder-oss-instruct-75k": 4906
+    },
+    "val": {
+      "magicoder-oss-instruct-75k": 94
+    }
+  }
+}

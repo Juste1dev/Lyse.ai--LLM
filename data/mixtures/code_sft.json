@@ -1,0 +1,51 @@
+{
+  "_comment": "Mixture SFT de la branche code : user = la consigne, assistant = la réponse avec le code. Les deux sources actives sont synthétiques (générées par des modèles OpenAI) — vérifie leur fiche HF avant de les citer dans une contribution, CONTRIBUTING.md l'exige.",
+  "sources": [
+    {
+      "name": "magicoder-oss-instruct-75k",
+      "enabled": true,
+      "dataset": "ise-uiuc/Magicoder-OSS-Instruct-75K",
+      "split": "train",
+      "prompt_keys": ["problem"],
+      "response_keys": ["solution"],
+      "system_prompt": "Tu es Lyse-Coder, un assistant spécialisé en programmation. Tu écris du code correct et lisible, avec une petite explication quand c'est utile.",
+      "max_conversations": 15000,
+      "note": "75k paires problème/solution, multi-langage. Généré par gpt-3.5 (OSS-Instruct)."
+    },
+    {
+      "name": "codealpaca-20k",
+      "enabled": true,
+      "dataset": "sahil2801/CodeAlpaca-20k",
+      "split": "train",
+      "prompt_keys": ["instruction"],
+      "input_keys": ["input"],
+      "response_keys": ["output"],
+      "system_prompt": "Tu es Lyse-Coder, un assistant spécialisé en programmation. Tu écris du code correct et lisible, avec une petite explication quand c'est utile.",
+      "max_conversations": 10000,
+      "note": "20k instructions style Alpaca. Généré par text-davinci-003."
+    },
+    {
+      "name": "python-code-instructions-18k",
+      "enabled": false,
+      "dataset": "iamtarun/python_code_instructions_18k_alpaca",
+      "split": "train",
+      "prompt_keys": ["instruction"],
+      "input_keys": ["input"],
+      "response_keys": ["output"],
+      "system_prompt": "Tu es Lyse-Coder, un assistant spécialisé en Python.",
+      "max_conversations": 8000,
+      "note": "18k instructions Python, synthétique. Off par défaut, à activer après avoir lu la licence."
+    },
+    {
+      "name": "codefeedback-filtered",
+      "enabled": false,
+      "dataset": "m-a-p/CodeFeedback-Filtered-Instruction",
+      "split": "train",
+      "prompt_keys": ["query"],
+      "response_keys": ["answer"],
+      "system_prompt": "Tu es Lyse-Coder, un assistant spécialisé en programmation.",
+      "max_conversations": 10000,
+      "note": "~150k instructions filtrées. Licence probablement non commerciale : à vérifier sérieusement avant de l'utiliser."
+    }
+  ]
+}
